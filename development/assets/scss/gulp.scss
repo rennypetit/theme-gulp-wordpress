@@ -1,0 +1,45 @@
+@import 'colores';
+body{
+	width:100%;
+	.div{
+		background: $color;
+		color:red;
+	}
+}
+.chito{
+	background: blue;
+	& .div{
+		display: flex;
+	}
+}
+body{
+	margin-top: 100px;
+}
+.div2{
+	margin-left: 100px;
+}
+.a{
+	background:red;
+	display: flex;
+	justify-content: center;
+	color: blue;
+}
+.b{
+	@extend .a;
+	border-color: white;
+}
+@media (max-width:300px) {
+	.b{
+		background:red;
+	}
+}
+@media (max-width:300px) {
+	.chito{
+		background:red;
+	}
+}
+@media (max-width:300px) {
+	.a{
+		background:red;
+	}
+}

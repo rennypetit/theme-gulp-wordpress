@@ -1,0 +1,43 @@
+body {
+  width: 100%; }
+  body .div {
+    background: white;
+    color: red; }
+
+.chito {
+  background: blue; }
+  .chito .div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+body {
+  margin-top: 100px; }
+
+.div2 {
+  margin-left: 100px; }
+
+.a, .b {
+  background: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: blue; }
+
+.b {
+  border-color: white; }
+
+@media (max-width: 300px) {
+  .b {
+    background: red; } }
+
+@media (max-width: 300px) {
+  .chito {
+    background: red; } }
+
+@media (max-width: 300px) {
+  .a, .b {
+    background: red; } }
