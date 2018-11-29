@@ -23,21 +23,21 @@ gulp.task('scss', function() {
 	    browsers: ['last 3 versions'],
 	    cascade: true
 	}))
-	//.pipe(gcmq())
-	//.pipe(concat('all.css'))
+	.pipe(gcmq())
+	.pipe(concat('all.css'))
 	//.pipe(cssnano())
 	.pipe(gulp.dest('theme/assets/css/'))
 });
 
 // Tarea para procesar fuentes
 gulp.task('fonts', function() {
-	return gulp.src('development/assets/fonts/*.*') 
+	return gulp.src('development/assets/fonts/**/*') 
 	.pipe(gulp.dest('theme/assets/fonts'))
 });
 
 // Tarea para procesar imagenes
 gulp.task('img', function() {
-	return gulp.src('development/assets/img/*.*') 
+	return gulp.src('development/assets/img/**/*') 
 	.pipe(gulp.dest('theme/assets/img'))
 });
 
@@ -51,7 +51,7 @@ gulp.task('js', function() {
 
 gulp.task('php', () => {
   return gulp.src('development/**/*.php') 
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    //.pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('theme/'))
 });
 
@@ -64,7 +64,7 @@ gulp.task('watch', function () {
 	gulp.watch('development/assets/img/**', ['img'])
 	gulp.watch('development/assets/fonts/**', ['fonts'])
 	// gulp.watch('./src/**/*.*', ['archivos'])
-	// gulp.watch('./src/partials/**/*.php', ['parciales'])
+	// gulp.watch('./src/partials/**/*.html', ['parciales'])
 	// gulp.watch('./src/js/**/*.js', ['js'])
 	// gulp.watch('./src/media/**', ['medios'])
 })
